@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import React from "react";
-import ReactIcon, {GoogleIcon, NextIcon} from "../pages/icons/icons";
+import TailwindIcon, {GoogleIcon, NextIcon} from "../pages/icons/icons";
 import Warning from "../pages/icons/warning";
 export default function Home() {
   const Title = "QR Generator";
@@ -37,8 +37,8 @@ export default function Home() {
           </div>
           and
           <div className="flex-initial text-center px-2 py-2 ">
-            <a href="https://reactjs.org/">
-              <ReactIcon />
+            <a href="https://tailwindcss.com/">
+              <TailwindIcon />
             </a>
           </div>
         </div>
