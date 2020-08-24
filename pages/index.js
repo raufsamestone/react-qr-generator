@@ -1,8 +1,9 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import React from "react";
-import TailwindIcon, {GoogleIcon, NextIcon} from "../pages/icons/icons";
+import GithubIcon from "../pages/icons/icons";
 import Warning from "../pages/icons/warning";
+import Cards from "../pages/components/cards";
 export default function Home() {
   const Title = "QR Generator";
 
@@ -13,36 +14,21 @@ export default function Home() {
   const uri = `https://chart.googleapis.com/chart?chs=${width}x${width}&cht=qr&chl=${
     text.length > 200 ? null : text
   }&choe=${encode}`;
+
   return (
     <>
       <Head>
         <title>{Title}</title>
         <link rel="icon" href="/favicon.ico" />
+        <Cards />
       </Head>
-      <h1 className={styles.title} className=" font-sans font-black text-center text-6xl">
+      <h1
+        className={styles.title}
+        className=" font-sans font-black text-center text-6xl"
+      >
         {Title}
       </h1>
-      <div className="w-40 m-auto">
-        <div className="flex text-gray-400 justify-between items-center ">
-          Using{" "}
-          <div className="flex-initial text-center px-2 py-2 ">
-            <a href="https://developers.google.com/chart/infographics/docs/qr_codes">
-              <GoogleIcon />
-            </a>
-          </div>
-          <div className="flex-initial text-center px-2 py-2 ">
-            <a href="https://nextjs.org/">
-              <NextIcon />
-            </a>
-          </div>
-          and
-          <div className="flex-initial text-center px-2 py-2 ">
-            <a href="https://tailwindcss.com/">
-              <TailwindIcon />
-            </a>
-          </div>
-        </div>
-      </div>
+      <p className="font-sans text-center"><GithubIcon/> </p>
       <div className={styles.container}>
         <main className={styles.main}>
           <div className="mt-4 inline-block relative w-64">
@@ -105,7 +91,7 @@ export default function Home() {
           </div>
           <a href="/">
             <button class="mt-20 float-left bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-2 border border-gray-400 rounded shadow">
-              Refresh
+              Reset
             </button>
           </a>
         </main>
@@ -127,7 +113,7 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <p className="text-center text-gray-500 text-xs mt-12">
+      <p className="text-center text-gray-500 text-xs mt-12 mb-12">
         &copy; <a href="mailto:hey@raufsamestone.com">hey@raufsamestone.com</a>
       </p>
     </>
