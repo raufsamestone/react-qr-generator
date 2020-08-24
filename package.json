@@ -1,15 +1,24 @@
 {
   "name": "react-qr-generator",
+  "description": "Basic React QR Generator",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Berkay Demirbas",
+    "email": "hey@raufsamestone.com",
+    "url": "https://raufsamestone.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "autoprefixer": "^9.8.6",
     "next": "9.5.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "tailwindcss": "^1.7.3"
   }
 }

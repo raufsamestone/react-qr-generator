@@ -1,7 +1,8 @@
 .container {
-  min-height: 100vh;
+  min-height: 50vh;
   padding: 0 0.5rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -80,6 +81,15 @@
   max-width: 800px;
   margin-top: 3rem;
 }
+.gridItem {
+  display: grid;
+  margin: auto;
+  text-align: center;
+}
+.gridItem img {
+  margin: auto;
+  text-align: center;
+}
 
 .card {
   margin: 1rem;
@@ -119,5 +129,8 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+  .container {
+    display: unset;
   }
 }
